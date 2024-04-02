@@ -9,7 +9,12 @@ app.post('*', async (req, res) => {
       res.send(await handler(req));
 });
 
+app.get('/myancare', async (req, res) => {
+      res.send("MyanCare!")
+})
+
 app.get('*', (req, res) => {
+      console.log("get",req.body);
       res.send("get het!");
 });
 
